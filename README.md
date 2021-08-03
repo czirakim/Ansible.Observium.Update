@@ -3,7 +3,7 @@
 It has 3 main files:
 
 - inventory file
-  <br>This file is where we define our Observium servers some variables.
+  <br>This file is where we define our Observium servers,some variables.
 - /group_vars/servers file
   <br>This file hosts the svn user/password and the sudo password
 - main.yml file
