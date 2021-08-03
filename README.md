@@ -1,5 +1,7 @@
 # Ansible.Observium.Update
 
+This project is for updating the Observium server and pollers.
+
 It has 3 main files:
 
 - inventory file
