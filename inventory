@@ -1,0 +1,5 @@
+[servers]
+
+observium-master ansible_user=admin ansible_become=yes ansible_become_method=sudo ansible_become_pass='{{ sudo_pass }}'
+observium-02 ansible_user=admin ansible_become=yes ansible_become_method=sudo ansible_become_pass='{{ sudo_pass }}'
+observium-03 ansible_user=admin ansible_become=yes ansible_become_method=sudo ansible_become_pass='{{ sudo_pass }}'
