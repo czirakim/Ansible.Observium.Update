@@ -1,0 +1,23 @@
+---
+- hosts: servers
+
+
+  tasks:
+  
+
+  - name: svn status
+    tags: svn_status 
+    command:  svn status --show-updates --username {{ svn_user }} --password {{ svn_password }}
+    args:
+      chdir: /opt/observium
+      
+  - name: svn update
+    command:  svn update --username {{ svn_user }} --password {{ svn_password }}
+    args:
+      chdir: /opt/observium  
+    become: yes  
+    
+  - name: DB updates on master
+    command: /opt/observium/discovery.php -u
+    become: yes
+    when: ansible_host == "observium-master"
